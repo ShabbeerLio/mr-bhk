@@ -1,0 +1,23 @@
+.category{
+    width: 100%;
+}
+
+.category-main{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 25px 0 45px 0;
+}
+.category-main{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .category-main {
+      max-width: 1140px;
+    }
+  }

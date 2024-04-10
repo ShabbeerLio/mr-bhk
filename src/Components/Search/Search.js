@@ -2,7 +2,7 @@ import React from 'react'
 import "./Search.css"
 import { CiSearch } from "react-icons/ci";
 import { MdMyLocation } from "react-icons/md";
-import { IoMdMic } from "react-icons/io";
+import { IoMdMic ,IoIosArrowDown } from "react-icons/io";
 
 const Search = () => {
     return (
@@ -23,7 +23,7 @@ const Search = () => {
                     <form action="">
                         <div className="resident-project">
                             <div class="dropdown">
-                                <p class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Residential Project</p>
+                                <p class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Residential Project <IoIosArrowDown/></p>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="#">Action</a></li>
                                     <li><a class="dropdown-item" href="#">Another action</a></li>
