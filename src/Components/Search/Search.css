@@ -1,0 +1,161 @@
+.searchbar{
+    width: max-content;
+    margin: 0 auto;
+    position: absolute;
+    top: 272px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.searchbar-top{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding: 6px 0;
+    z-index: 2;
+    width: 100%;
+    white-space: nowrap;
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+    background: #fff;
+    border-bottom: 1px solid #F4F5F7;
+}
+
+.searchbar-top ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.searchbar-top ul li{
+    display: flex;
+    padding: 16px 32px;
+}
+.searchbar-top ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+    
+}
+
+.searchbar-search form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 1px rgba(21,28,34,0.5);
+}
+
+.resident-project{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    min-width: 0;
+}
+.resident-project .dropdown{
+    border-right: 1px solid #EBECF0;
+    padding: 25px;
+    display: inline-block;
+    cursor: pointer;
+}
+.resident-project .dropdown p{
+    margin: 0;
+    padding: 0;
+}
+
+.searchbar-box{
+    position: relative;
+    flex-grow: 1;
+    min-width: 0;
+    display: flex;
+    padding: 22px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 69px;
+    align-items: flex-start;
+}
+.searchbar-box svg{
+    font-size: 25px;
+    margin-right: 8px;
+}
+
+.searchbar-boxes{
+    width: 100%;
+    flex: 1;
+    margin-right: 8px;
+}
+.searchbar-box input{
+    font-size: 14px;
+    width: 98%;
+    border: 0;
+    margin-left: 12px;
+    vertical-align: middle;
+    box-shadow: none;
+    min-width: 260px;
+}
+.searchbar-box input:focus-visible {
+    outline: none;
+}
+
+.searchnames {
+    position: absolute;
+    top: 16px;
+    left: 48px;
+    width: 75%;
+    height: 60%;
+    pointer-events: none;
+}
+.searchnames:after {
+    line-height: 1.3em;
+    display: block;
+    content: "Search \"City / Locality / Projects / Landmarks...\"";
+    position: absolute;
+    padding: 5px;
+    font-style: italic;
+    animation: component__animText 15s linear infinite;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #42526E;
+}
+
+.searchbar-mic svg{
+    color: rgb(0, 153, 255);
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.searchbar-button{
+    padding: 16px;
+}
+.searchbar-button button{
+    box-shadow: 0 1px 4px 0 rgba(0,106,194,0.2);
+    background: #0078DB;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    outline: none;
+    margin: 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0;
+    min-height: auto;
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
