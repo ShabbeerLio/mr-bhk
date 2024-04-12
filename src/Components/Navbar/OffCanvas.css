@@ -1,0 +1,14 @@
+.offcanvas-box ul {
+  padding: 0;
+}
+.offcanvas-box ul li {
+  display: flex;
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+.offcanvas-box ul li a {
+  color: black !important;
+  text-decoration: none;
+}
+.offcanvas-box {
+  width: 100%;
+}
