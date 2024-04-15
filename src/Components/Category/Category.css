@@ -1,15 +1,6 @@
 .category{
     width: 100%;
-    padding: 30rem 4rem 4rem 4rem;
-    height: 200vh;
-}
-.category h1{
-    text-align: center;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 400;
-    color: #8993A4;
-    display: block;
+    padding: 30rem 3rem 3rem 3rem;
 }
 
 .category-main{
@@ -19,6 +10,14 @@
     margin-right: auto;
     margin-left: auto;
     padding: 5px 0 45px 0;
+}
+.category h1{
+    color: #303030;
+    /* font-size: 30px; */
+    font-weight: 500;
+    line-height: 32px;
+    display: block;
+    margin-bottom: 20px;
 }
 .category-main .owl-nav button{
     background-color: white !important;
@@ -41,11 +40,23 @@
     right: -1%;
 }
 
+.category-image{
+    overflow: hidden;
+    border-radius: 8px;
+}
+
 .category-card img{
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
     aspect-ratio: 3/2;
+    transform: scale(1);
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.category-card img:hover{
+    border-radius: 8px;
+    transform: scale(1.05);
 }
 
 .category-card{

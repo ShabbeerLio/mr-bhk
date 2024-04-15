@@ -3,8 +3,9 @@ import "./Search.css"
 import { CiSearch } from "react-icons/ci";
 import { MdMyLocation } from "react-icons/md";
 import { IoMdMic, IoIosArrowDown } from "react-icons/io";
+import { IoLocationSharp } from "react-icons/io5";
 
-const Search = () => {
+const Search = (props) => {
 
     const items = ['Residentail', 'Commercial', 'New Projects', 'Plot / Land'];
     const [selectedItem, setSelectedItem] = useState(items[0]);
@@ -26,17 +27,25 @@ const Search = () => {
                     <form action="">
                         <div className="resident-project">
                             <div class="dropdown">
-                                <p class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Noida<IoIosArrowDown /></p>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
+                                <select
+                                    className="location"
+                                    name="location2"
+                                    id="location2"
+                                    form="locationform"
+                                    value={props.selectedLocation} // Set the selected value to state
+                                    onChange={props.handleLocationChange} // Call the function when the selection changes
+                                >
+                                    <option className="option" value="Noida">Noida</option>
+                                    <option className="option" value="Delhi">Delhi</option>
+                                    <option className="option" value="Gurgaon">Gurgaon</option>
+                                    <option className="option" value="Gr.Noida">Gr.Noida</option>
+                                    <option className="option" value="Ghaziabad">Ghaziabad</option>
+                                </select>
                             </div>
                             <div className="searchbar-box">
                                 <CiSearch />
                                 <div className="searchbar-boxes">
-                                    <input type="text" placeholder='Search By City" Noida"' />
+                                    <input type="text" placeholder={`Search by "${props.selectedLocation}"`} />
                                     <div className="searchnames"></div>
                                 </div>
                             </div>

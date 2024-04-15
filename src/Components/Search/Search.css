@@ -1,5 +1,5 @@
 .searchbar {
-  width: max-content;
+  /* width: max-content; */
   margin: 0 auto;
   position: absolute;
   top: 272px;
@@ -9,8 +9,6 @@
 }
 .searchbar-main {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -90,22 +88,24 @@
   display: inline-block;
   cursor: pointer;
 }
-.resident-project .dropdown p {
-  margin: 0;
-  padding: 0;
+.resident-project .dropdown select {
+  border: none;
+}
+.resident-project .dropdown select:focus-visible {
+  outline: none;
 }
 
 .searchbar-box {
+  align-items: center;
   position: relative;
   flex-grow: 1;
   min-width: 0;
   display: flex;
-  padding: 22px;
+  padding: 0px 10px;
   white-space: nowrap;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   height: 69px;
-  align-items: flex-start;
 }
 .searchbar-box svg {
   font-size: 25px;
@@ -113,15 +113,15 @@
 }
 
 .searchbar-boxes {
-  width: 100%;
+  width: 80%;
   flex: 1;
   margin-right: 8px;
 }
 .searchbar-box input {
   font-size: 14px;
-  width: 98%;
+  width: 90%;
   border: 0;
-  margin-left: 12px;
+  margin-left: 5px;
   vertical-align: middle;
   box-shadow: none;
   min-width: 260px;
@@ -196,8 +196,8 @@
   outline: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 990px) {
   .searchbar-main {
-    max-width: 1140px;
+    max-width: 900px;
   }
 }

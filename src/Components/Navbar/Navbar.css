@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   background-color: transparent;
-  /* height: 150px; */
+  height: 0px;
 }
 
 .navbar-main.navbar-scrolled .nav-menu {
@@ -31,13 +31,19 @@
 .navbar-onscroll.hidden .searchbar-search form .searchbar-button {
   padding: 0px 10px;
 }
+.navbar-onscroll.hidden .searchbar-search svg {
+  color: #0097b2;
+}
 .navbar-onscroll.hidden .searchbar-box input {
-  min-width: 500px;
+  min-width: unset;
 }
 .navbar-onscroll.hidden .resident-project .dropdown {
-  padding: 0px 18px;
+  padding: 0px 10px;
   display: flex;
   align-items: center;
+}
+.navbar-onscroll.hidden .resident-project .dropdown p{
+ margin: 0;
 }
 .navbar-onscroll.hidden .searchbar-box {
   padding: 20px;
@@ -52,6 +58,10 @@
 
 .navbar-search2.hidden {
   display: none;
+}
+
+.navbar-main.navbar-scrolled .navBar{
+  overflow: hidden;
 }
 
 .navbar-main {
@@ -78,6 +88,7 @@
   top: 0;
   z-index: 9999;
   background-color: transparent;
+  /* overflow: hidden; */
   /* box-shadow: 0px 4px 10px 0px rgba(105, 105, 105, 0.3); */
 }
 
@@ -114,6 +125,7 @@
   color: white;
   border: none;
   font-size: 14px;
+  padding: 5px 10px;
 }
 .navbar-items label {
   background-color: transparent;
@@ -255,7 +267,7 @@
 
 .nav-menu {
   width: 100%;
-  padding: 20px 10px;
+  padding: 20px 15px;
 }
 
 .navBar-logo img {
@@ -285,7 +297,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 10px;
+  padding-left: 10px;
 }
 
 .nav-action svg:hover {
@@ -403,6 +415,10 @@
   justify-content: space-between;
 }
 
+.accordion.accordion-flush{
+  width: 100%;
+}
+
 @media screen and (min-width: 992px) {
   .navbar-expand-lg .navbar-collapse {
     justify-content: space-between;
@@ -424,6 +440,9 @@
 }
 
 @media only screen and (max-width: 990px) {
+  .navbar-onscroll.hidden .searchbar-box input {
+    min-width: 450px;
+  }
   .nav-action {
     flex-flow: wrap;
   }

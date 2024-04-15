@@ -15,13 +15,13 @@ const Category = () => {
             items: 3,
         },
         1000: {
-            items: 6,
+            items: 4,
         },
     };
     return (
         <div className='category'>
-            <h1>GET STARTED WITH EXPLORING REAL ESTATE OPTIONS</h1>
             <div className='category-main'>
+                <h1>Get started with exploring real estate options</h1>
                 <ReactOwlCarousel
                     items={6}
                     nav={true}
@@ -30,7 +30,9 @@ const Category = () => {
                 >
                     {CatergoryData.map((item) => (
                         <div className="category-card">
-                            <img src={item.cover} alt="" />
+                            <div className="category-image">
+                                <img src={item.cover} alt="" />
+                            </div>
                             <p>{item.title}</p>
                         </div>
                     ))}

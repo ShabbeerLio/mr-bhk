@@ -1,0 +1,101 @@
+.findhome {
+  width: 100%;
+  padding: 5rem;
+  background-color: black;
+}
+
+.findhome-main {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  /* margin-right: auto;
+  margin-left: auto; */
+}
+
+.findhome-box {
+  display: flex;
+  gap: 1rem;
+}
+
+.findhome-left {
+  width: 60%;
+  display: flex;
+}
+
+.findhome-left-image {
+  width: 58%;
+  display: flex;
+}
+
+.findhome-left img {
+  width: 55%;
+  aspect-ratio: 2 / 4;
+  object-fit: cover;
+  border-radius: 25px;
+  margin-right: 15px;
+}
+
+.findhome-right {
+  width: 40%;
+  padding: 20px;
+}
+
+.findhome-right h3 {
+    color: white;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 90%;
+  margin-bottom: 20px;
+}
+
+.findhome-right p {
+    color: rgb(180, 180, 180);
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.findhome-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 20px 0px;
+}
+
+.findhome-opt-box a{
+  display: flex;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.findhome-opt-box svg {
+  font-size: 30px;
+  color: #0097b3;
+  margin-right: 20px;
+}
+
+.findhome-opt-box p {
+  font-size: 20px;
+  margin: 0;
+  color: white;
+  font-weight: 500;
+}
+
+.findhome-button{ 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.findhome-button p{ 
+    background-color: #0097b3;
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/* 
+@media screen and (min-width: 1200px) {
+  .findhome-main {
+    max-width: 1140px;
+  }
+} */

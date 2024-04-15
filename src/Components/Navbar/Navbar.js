@@ -15,6 +15,8 @@ import { IoLocationSharp } from "react-icons/io5";
 
 const Navbar = () => {
 
+
+
     const [scrolling, setScrolling] = useState(false);
     const [navbarHeight, setNavbarHeight] = useState(0);
 
@@ -46,6 +48,13 @@ const Navbar = () => {
     const closeMenu = () => {
     };
 
+    const [selectedLocation, setSelectedLocation] = useState("Noida");
+
+    // Event handler to update the selected location
+    const handleLocationChange = (event) => {
+        setSelectedLocation(event.target.value);
+    };
+
     return (
         <>
             <div className={`navbar-main ${scrolling ? 'navbar-scrolled' : ''}`}>
@@ -67,13 +76,18 @@ const Navbar = () => {
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                     <div className="navbar-items">
                                         <div className="navbar-location">
-                                            <label for="location"> <IoLocationSharp/></label>
-                                            <select className="location" name="location" id="location" form="locationform">
-                                                <option className="option" value="0">Noida</option>
-                                                <option className="option" value="1">Delhi</option>
-                                                <option className="option" value="2">Gurgaon</option>
-                                                <option className="option" value="3">Gr.Noida</option>
-                                                <option className="option" value="4">Ghaziabad</option>
+                                            <label for="location"> <IoLocationSharp /></label>
+                                            <select className="location"
+                                                name="location"
+                                                id="location"
+                                                form="locationform"
+                                                value={selectedLocation}
+                                                onChange={handleLocationChange}>
+                                                <option className="option" value="Noida">Noida</option>
+                                                <option className="option" value="Delhi">Delhi</option>
+                                                <option className="option" value="Gurgaon">Gurgaon</option>
+                                                <option className="option" value="Gr.Noida">Gr.Noida</option>
+                                                <option className="option" value="Ghaziabad">Ghaziabad</option>
                                             </select>
                                         </div>
                                     </div>
@@ -129,18 +143,18 @@ const Navbar = () => {
                                                 <form action="">
                                                     <div className="resident-project">
                                                         <div class="dropdown">
-                                                            <p class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">{scrolling ? 'Buy' : 'Residential Project'} <IoIosArrowDown /></p>
-                                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                                            </ul>
+                                                            <select className="location-chs" name="location-chs" id="location-chs" form="locationform">
+                                                                <option className="option" value="Residential">Residential</option>
+                                                                <option className="option" value="Commercial">Commercial</option>
+                                                                <option className="option" value="New Projects">New Projects</option>
+                                                                <option className="option" value="Plot / Land">Plot / Land</option>
+                                                            </select>
                                                         </div>
                                                         <div className="searchbar-box">
 
                                                             <div className="searchbar-boxes">
-                                                                <input type="text" />
-                                                                <div className="searchnames"></div>
+                                                                <input type="text" placeholder={`Search by "${selectedLocation}"`} />
+                                                                {/* <div className="searchnames"></div> */}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -196,7 +210,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className={`navbar-search2 ${scrolling ? 'hidden' : ''}`}>
-                    <Search />
+                    <Search selectedLocation={selectedLocation} handleLocationChange={handleLocationChange} />
                 </div>
             </div>
         </>
