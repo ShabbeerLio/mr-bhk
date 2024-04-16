@@ -6,7 +6,7 @@ const LatestProperties = () => {
     return (
         <div className='latestProperty'>
             <div className='latestProperty-main'>
-                <h1>Latest Properties</h1>
+                <h2>Latest Properties</h2>
                 <div className="property-box">
                     {CatergoryData.slice(0, 6).map((item) => (
                         <div className="property-card">
@@ -15,11 +15,16 @@ const LatestProperties = () => {
                             </div>
                             <div className="property-card-detail">
                                 <span>4 BHk Flat</span>
-                                <h2>₹ 45.5 l | 2794 sqft </h2>
-                                <p>Uncover Extravagance with a 2794 sq ft 4BHK at Lotus Panache – Yours at an Irresistible Price of 2.5 Cr.</p>
+                                <h3>₹ 45.5 l | 2794 sqft </h3>
+                                <p> 2794 sq ft 4BHK at Noida sector 62</p>
+                                <p>Ready to move</p>
+                                <span className='view'>View Detail</span>
                             </div>
                         </div>
                     ))}
+                </div>
+                <div className="latestProperty-more">
+                    <p>View More</p>
                 </div>
             </div>
         </div>

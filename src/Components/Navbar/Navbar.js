@@ -12,11 +12,9 @@ import { IoMdMic } from "react-icons/io";
 import OffCanvas from './OffCanvas';
 import { FaPhone } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
+import { Nav, NavDropdown } from 'react-bootstrap';
 
 const Navbar = () => {
-
-
-
     const [scrolling, setScrolling] = useState(false);
     const [navbarHeight, setNavbarHeight] = useState(0);
 
@@ -50,9 +48,45 @@ const Navbar = () => {
 
     const [selectedLocation, setSelectedLocation] = useState("Noida");
 
-    // Event handler to update the selected location
     const handleLocationChange = (event) => {
         setSelectedLocation(event.target.value);
+    };
+
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [showCommercial, setShowCommercial] = useState(false);
+    const [showBuilder, setShowBuilder] = useState(false);
+    const [showNewProjects, setShowNewProjects] = useState(false);
+
+    const handleMouseEnter = () => {
+        setShowDropdown(true);
+    };
+
+    const handleMouseLeave = () => {
+        setShowDropdown(false);
+    };
+
+    const handleCommercialMouseEnter = () => {
+        setShowCommercial(true);
+    };
+
+    const handleCommercialMouseLeave = () => {
+        setShowCommercial(false);
+    };
+
+    const handleBuilderMouseEnter = () => {
+        setShowBuilder(true);
+    };
+
+    const handleBuilderMouseLeave = () => {
+        setShowBuilder(false);
+    };
+
+    const handleNewProjectsMouseEnter = () => {
+        setShowNewProjects(true);
+    };
+
+    const handleNewProjectsMouseLeave = () => {
+        setShowNewProjects(false);
     };
 
     return (
@@ -92,52 +126,59 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                     <ul className={`navbar-nav ${scrolling ? 'hidden' : ''} ml-auto`}>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Residential
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="#">Flats in Noida</a></li>
-                                                <li><a class="dropdown-item" href="#">Plots in Noida</a></li>
-                                                <li><a class="dropdown-item" href="#">Villa in Noida</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Commercial
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="#">Office space in Noida</a></li>
-                                                <li><a class="dropdown-item" href="#">Shop in Noida</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Builder
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="#">Gaursons</a></li>
-                                                <li><a class="dropdown-item" href="#">Waoe's</a></li>
-                                                <li><a class="dropdown-item" href="#">Bhutani</a></li>
-                                                <li><a class="dropdown-item" href="#">SKS</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                New Projects
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="#">Veridia</a></li>
-                                                <li><a class="dropdown-item" href="#">ATS Floral pathway</a></li>
-                                                <li><a class="dropdown-item" href="#">Sikka Kammaya Green</a></li>
-                                            </ul>
-                                        </li>
+                                        <Nav >
+                                            <NavDropdown
+                                                title="Residential"
+                                                show={showDropdown}
+                                                id="nav-dropdown"
+                                                onMouseEnter={handleMouseEnter}
+                                                onMouseLeave={handleMouseLeave}
+                                            >
+                                                <NavDropdown.Item href="#">Flats in Noida</NavDropdown.Item>
+                                                <NavDropdown.Item href="#">Plots in Noida</NavDropdown.Item>
+                                                <NavDropdown.Item href="#">Villa in Noida</NavDropdown.Item>
+                                            </NavDropdown>
+                                            <NavDropdown
+                                                title="Commercial"
+                                                show={showCommercial}
+                                                id="commercial-dropdown"
+                                                onMouseEnter={handleCommercialMouseEnter}
+                                                onMouseLeave={handleCommercialMouseLeave}
+                                            >
+                                                <NavDropdown.Item href="#">Office space in Noida</NavDropdown.Item>
+                                                <NavDropdown.Item href="#">Shop in Noida</NavDropdown.Item>
+                                            </NavDropdown>
+
+                                            <NavDropdown
+                                                title="Builder"
+                                                show={showBuilder}
+                                                id="builder-dropdown"
+                                                onMouseEnter={handleBuilderMouseEnter}
+                                                onMouseLeave={handleBuilderMouseLeave}
+                                            >
+                                                <NavDropdown.Item href="#">Gaursons</NavDropdown.Item>
+                                                <NavDropdown.Item href="#">Waoe's</NavDropdown.Item>
+                                                <NavDropdown.Item href="#">Bhutani</NavDropdown.Item>
+                                                <NavDropdown.Item href="#">SKS</NavDropdown.Item>
+                                            </NavDropdown>
+
+                                            <NavDropdown
+                                                title="New Projects"
+                                                show={showNewProjects}
+                                                id="new-projects-dropdown"
+                                                onMouseEnter={handleNewProjectsMouseEnter}
+                                                onMouseLeave={handleNewProjectsMouseLeave}
+                                            >
+                                                <NavDropdown.Item href="#">Veridia</NavDropdown.Item>
+                                                <NavDropdown.Item href="#">ATS Floral pathway</NavDropdown.Item>
+                                                <NavDropdown.Item href="#">Sikka Kammaya Green</NavDropdown.Item>
+                                            </NavDropdown>
+                                        </Nav>
                                         <li class="nav-item">
                                             <a class="nav-link" href="/blogs">Blogs</a>
                                         </li>
                                     </ul>
                                     <div className="navbar-items">
-
                                         <div className={`navbar-onscroll ${scrolling ? 'hidden' : ''}`}>
                                             <div className="searchbar-search">
                                                 <form action="">
@@ -158,9 +199,9 @@ const Navbar = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="searchbar-mic">
+                                                    {/* <div className="searchbar-mic">
                                                         <MdMyLocation />
-                                                    </div>
+                                                    </div> */}
                                                     <div className="searchbar-mic">
                                                         <IoMdMic />
                                                     </div>

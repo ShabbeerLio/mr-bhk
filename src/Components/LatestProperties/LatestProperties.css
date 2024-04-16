@@ -1,7 +1,7 @@
 .latestProperty {
   width: 100%;
-  padding: 5rem;
-  background-color: #f1f1f1;
+  padding: 5rem 0rem;
+  /* background-color: #f1f1f1; */
 }
 
 .latestProperty-main {
@@ -11,9 +11,9 @@
   margin-right: auto;
   margin-left: auto;
 }
-.latestProperty-main h1 {
+.latestProperty-main h2 {
   margin-bottom: 20px;
-  font-size: 30px;
+  /* font-size: 35px; */
 }
 
 .property-box {
@@ -25,6 +25,8 @@
 .property-card {
   border-radius: 8px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .property-card-image {
@@ -32,32 +34,67 @@
   object-fit: cover;
 }
 .property-card-image img {
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 8px;
   width: 100%;
   object-fit: cover;
   aspect-ratio: 3/2;
+  filter: brightness(70%);
 }
 
 .property-card-detail {
-  padding: 1rem 1.5rem;
-  background-color: white;
-  border-radius: 0px 0px 10px 10px;
+  padding: 1rem .5rem;
+  /* background-color: #e1ebec; */
+  /* border-radius: 0px 0px 10px 10px; */
 }
 .property-card-detail span {
   color: #252a2c;
   font-size: 15px;
   font-weight: 500;
 }
-.property-card-detail h2 {
+.property-card-detail h3 {
   color: #0197ae;
   font-size: 22px;
   font-weight: 500;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 .property-card-detail p {
   font-size: 15px;
   font-weight: 400;
-  margin: 10px 0px;
+  margin: 0px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.property-card-detail .view {
+  position: absolute;
+  background-color: #0197ae;
+  padding: 8px 20px;
+  border-radius: 8px;
+  bottom: -15%;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
+.property-card:hover .property-card-detail .view {
+  bottom: 6%;
+}
+.property-card:hover .property-card-detail p{
+  color: transparent;
+}
+
+.latestProperty-more{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.latestProperty-more p{
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #0197ae;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  color: black;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 1200px) {
@@ -66,9 +103,17 @@
   }
 }
 
+@media only screen and (max-width: 990px) {
+  .property-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
 @media only screen and (max-width: 420px) {
   .latestProperty {
-    padding: 15px;
+    padding: 3rem 0;
   }
 
   .property-box {

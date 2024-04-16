@@ -1,6 +1,6 @@
 .findhome {
   width: 100%;
-  padding: 5rem;
+  padding: 5rem 1rem;
   background-color: black;
 }
 
@@ -93,9 +93,37 @@
     padding: 10px 20px;
     cursor: pointer;
 }
-/* 
-@media screen and (min-width: 1200px) {
-  .findhome-main {
-    max-width: 1140px;
+
+@media only screen and (max-width: 990px) {
+  .findhome {
+    width: 100%;
+    padding: 5rem 0rem;
+    background-color: black;
   }
-} */
+  .findhome-box {
+    flex-wrap: wrap;
+  }
+
+  .findhome-left {
+    width: 100%;
+    display: block;
+  }
+
+  .findhome-left-image {
+    width: 55%;
+  }
+  .findhome-right {
+    width: 100%;
+    padding: 20px 0px;
+  }
+}
+@media only screen and (max-width: 420px) {
+
+  .findhome {
+    padding: 3rem 0rem;
+  }
+
+  .findhome-options {
+    grid-template-columns: repeat(1,1fr);
+  }
+}

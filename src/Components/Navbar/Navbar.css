@@ -9,6 +9,7 @@
   background-color: black;
   transition: all 0.8s ease;
   -webkit-transition: all 0.8s ease;
+  border-bottom: 1px solid rgb(39, 39, 39);
 }
 
 .navbar-image.hidden {
@@ -42,8 +43,8 @@
   display: flex;
   align-items: center;
 }
-.navbar-onscroll.hidden .resident-project .dropdown p{
- margin: 0;
+.navbar-onscroll.hidden .resident-project .dropdown p {
+  margin: 0;
 }
 .navbar-onscroll.hidden .searchbar-box {
   padding: 20px;
@@ -60,7 +61,7 @@
   display: none;
 }
 
-.navbar-main.navbar-scrolled .navBar{
+.navbar-main.navbar-scrolled .navBar {
   overflow: hidden;
 }
 
@@ -105,13 +106,13 @@
   color: rgb(56, 56, 56) !important;
 }
 
-.navbar-location{
+.navbar-location {
   border: 1px solid white;
   border-radius: 5px;
   padding: 5px;
   background-color: rgba(34, 34, 34, 0.322);
 }
-.navbar-location select option{
+.navbar-location select option {
   background-color: white;
   color: black;
   padding: 10px 20px;
@@ -132,11 +133,11 @@
   color: white;
   border: none;
 }
-.navbar-items svg{
+.navbar-items svg {
   color: white;
   font-size: 18px;
 }
-.navbar-items .location.selected{
+.navbar-items .location.selected {
   background-color: transparent;
   color: white;
 }
@@ -165,11 +166,10 @@
   align-items: center;
   text-decoration: none;
 }
-.navbar-search a svg{
- margin-right: 10px;
- color: #009ab5;
+.navbar-search a svg {
+  margin-right: 10px;
+  color: #009ab5;
 }
-
 
 .navbar-contactus {
   background-color: white;
@@ -282,15 +282,17 @@
   position: relative;
 }
 
-.nav-menu ul li a {
-  padding: 10px 0px !important;
-  font-size: 15px;
-  color: rgb(255, 255, 255) !important;
-  text-transform: capitalize;
+.navbar-light .navbar-nav .nav-link {
+  color: white;
 }
 
-.nav-menu ul li a:hover {
+.navbar-light .navbar-nav .nav-link:hover {
   color: gray !important;
+}
+.nav-link .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0097b2 !important;
 }
 
 .nav-action {
@@ -411,11 +413,7 @@
   transform: scale(1);
 }
 
-.navbar-expand-lg .navbar-collapse {
-  justify-content: space-between;
-}
-
-.accordion.accordion-flush{
+.accordion.accordion-flush {
   width: 100%;
 }
 
@@ -441,10 +439,17 @@
 
 @media only screen and (max-width: 990px) {
   .navbar-onscroll.hidden .searchbar-box input {
-    min-width: 450px;
+    min-width: unset;
+  }
+  .navbar-items {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 20px;
   }
   .nav-action {
-    flex-flow: wrap;
+    display: grid;
+    gap: 1rem;
+    padding: 0;
   }
   .call-number {
     padding: 10px 20px;
@@ -483,9 +488,17 @@
     position: relative;
     border-bottom: 1px solid #bbb;
   }
+  .navbar-expand-lg .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.486);
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  .nav {
+    display: block;
+  }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 420px) {
   .offcanvas.show {
     width: 100%;
   }
@@ -494,4 +507,5 @@
     bottom: 10px;
     right: 20px;
   }
+  
 }

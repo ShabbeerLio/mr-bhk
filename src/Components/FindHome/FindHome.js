@@ -44,7 +44,7 @@ const FindHome = () => {
                             </div>
                         </div>
                         <div className="findhome-button">
-                            <p>About Us</p>
+                            <p>Explore Us</p>
                         </div>
                     </div>
                 </div>

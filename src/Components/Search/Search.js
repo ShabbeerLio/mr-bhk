@@ -48,10 +48,10 @@ const Search = (props) => {
                                     <input type="text" placeholder={`Search by "${props.selectedLocation}"`} />
                                     <div className="searchnames"></div>
                                 </div>
-                            </div>
-                        </div>
                         <div className="searchbar-mic">
                             <IoMdMic />
+                        </div>
+                            </div>
                         </div>
                         <div className="search-filters">
                             <select className="filter-box" name="location" id="location" form="locationform">

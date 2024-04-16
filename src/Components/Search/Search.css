@@ -1,5 +1,4 @@
 .searchbar {
-  /* width: max-content; */
   margin: 0 auto;
   position: absolute;
   top: 272px;
@@ -138,22 +137,11 @@
   height: 60%;
   pointer-events: none;
 }
-/* .searchnames:after {
-  line-height: 1.3em;
-  display: block;
-  content: 'Search "City / Locality / Projects / Landmarks..."';
-  position: absolute;
-  padding: 5px;
-  font-style: italic;
-  animation: component__animText 15s linear infinite;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 24px;
-  color: #42526e;
-} */
 
+.searchbar-mic{
+  display: flex;
+  align-items: center;
+}
 .searchbar-mic svg {
   color: #0196b3;
   margin-right: 20px;
@@ -200,4 +188,35 @@
   .searchbar-main {
     max-width: 900px;
   }
+}
+
+@media only screen and (max-width: 420px) {
+  .searchbar {
+    top: 150px;
+  }
+  .searchbar-top ul {
+    flex-wrap: wrap;
+}
+.searchbar-search form {
+  display: block;
+}
+.resident-project .dropdown select {
+  background-color: transparent;
+}
+.search-filters .filter-box {
+  background-color: transparent;
+  padding: 10px 0px;
+}
+
+.resident-project {
+  display: block;
+}
+.resident-project .dropdown {
+  border-right: none;
+}
+
+.searchbar-box {
+  border: 1px solid rgb(196, 196, 196);
+  padding: 0px 20px;
+}
 }
