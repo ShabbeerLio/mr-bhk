@@ -202,9 +202,9 @@ const Navbar = () => {
                                                     {/* <div className="searchbar-mic">
                                                         <MdMyLocation />
                                                     </div> */}
-                                                    <div className="searchbar-mic">
+                                                    {/* <div className="searchbar-mic">
                                                         <IoMdMic />
-                                                    </div>
+                                                    </div> */}
                                                     <div className="searchbar-button">
                                                         <CiSearch />
                                                     </div>
@@ -212,21 +212,15 @@ const Navbar = () => {
                                             </div>
                                         </div>
                                         <div className="nav-action">
-                                            <div className="navbar-search">
+                                            {/* <div className="navbar-search">
                                                 <a href="tel: +919958732814">
                                                     <FaPhone />
                                                     <p>9958732814</p>
                                                 </a>
-                                            </div>
+                                            </div> */}
                                             <div className="navbar-search">
                                                 <p>Login</p>
                                             </div>
-                                            {/* <div className="navbar-contactus">
-                                                <FaHeadset />
-                                            </div>
-                                            <div className="navbar-contactus">
-                                                <MdAccountCircle />
-                                            </div> */}
                                             <div className="navbar-action" >
                                                 <HiMenuAlt1 type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" />
                                                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">

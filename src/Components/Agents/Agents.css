@@ -30,6 +30,8 @@
   margin-bottom: 20px;
   position: relative;
   z-index: 2;
+  font-size: 32px;
+  font-weight: 500;
 }
 
 .agents-box{

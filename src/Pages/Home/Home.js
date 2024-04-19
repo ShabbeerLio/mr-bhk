@@ -4,15 +4,17 @@ import LatestProperties from '../../Components/LatestProperties/LatestProperties
 import FindHome from '../../Components/FindHome/FindHome'
 import Agents from '../../Components/Agents/Agents'
 import FeaturedCity from '../../Components/FeaturedCity/FeaturedCity'
+import Categories from '../../Components/Category/Categories'
 
 const Home = () => {
   return (
     <>
       <Category />
-      <FindHome/>
+      {/* <FindHome/> */}
       <LatestProperties />
-      <Agents/>
+      {/* <Agents/> */}
       <FeaturedCity/>
+      {/* <Categories/> */}
     </>
   )
 }

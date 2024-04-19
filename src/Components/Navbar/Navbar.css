@@ -287,7 +287,7 @@
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: gray !important;
+  color: #a6a6a6 !important;
 }
 .nav-link .dropdown-item:active {
   color: #fff;

@@ -1,0 +1,29 @@
+.Footer {
+  width: 100%;
+  padding: 5rem 0;
+  background-color: black;
+}
+
+.Footer-main {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-item img {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .Footer-main {
+    max-width: 1140px;
+  }
+}

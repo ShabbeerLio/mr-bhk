@@ -1,30 +1,53 @@
 import React from 'react'
 import "./LatestProperties.css"
 import CatergoryData from '../Category/CatergoryData'
+import LatestPropertyData from './LatestPropertyData'
+import ReactOwlCarousel from 'react-owl-carousel'
 
 const LatestProperties = () => {
+
+    const responsiveOptions = {
+        0: {
+            items: 1,
+        },
+        420: {
+            items: 2,
+        },
+        600: {
+            items: 3,
+        },
+        1000: {
+            items: 4,
+        },
+    };
+
     return (
         <div className='latestProperty'>
             <div className='latestProperty-main'>
                 <h2>Latest Properties</h2>
                 <div className="property-box">
-                    {CatergoryData.slice(0, 6).map((item) => (
+                <ReactOwlCarousel
+                    items={6}
+                    nav={true}
+                    dots={false}
+                    responsive={responsiveOptions}
+                >
+                    {LatestPropertyData.map((item) => (
                         <div className="property-card">
                             <div className="property-card-image">
                                 <img src={item.cover} alt="" />
+                                <span>Possession from Oct 2027</span>
                             </div>
                             <div className="property-card-detail">
-                                <span>4 BHk Flat</span>
-                                <h3>₹ 45.5 l | 2794 sqft </h3>
-                                <p> 2794 sq ft 4BHK at Noida sector 62</p>
-                                <p>Ready to move</p>
+                                <span>{item.bhk} BHK Flat</span>
+                                <h3>₹ {item.price} | {item.sqft} sqft </h3>
+                                <p> {item.sqft} sqft {item.bhk} BHK at {item.area}</p>
+                                <p>{item.status}</p>
                                 <span className='view'>View Detail</span>
                             </div>
                         </div>
                     ))}
-                </div>
-                <div className="latestProperty-more">
-                    <p>View More</p>
+                </ReactOwlCarousel>
                 </div>
             </div>
         </div>

@@ -1,0 +1,58 @@
+const LatestPropertyData =[
+    {
+        id:1,
+        area:"Noida",
+        bhk: 3,
+        price:"45 l",
+        sqft: 1600,
+        status:"Ready to move",
+        cover: require("../../Assets/Property/noida property.jpg"),
+    },
+    {
+        id:2,
+        area:"Gurgaon",
+        bhk: 4,
+        price:"56 l",
+        sqft: 1797,
+        status:"Ready to move",
+        cover: require("../../Assets/Property/delhi property.avif"),
+    },
+    {
+        id:3,
+        area:"Delhi",
+        bhk: 5,
+        price:"80 l",
+        sqft: 2797,
+        status:"Ready to move",
+        cover: require("../../Assets/Property/gurgaon property.jpg"),
+    },
+    {
+        id:2,
+        area:"Noida",
+        bhk: 4,
+        price:"27 l",
+        sqft: 997,
+        status:"Ready to move",
+        cover: require("../../Assets/Property/g-noida property.jpeg"),
+    },
+    {
+        id:5,
+        area:"Ghaziabad",
+        bhk: 5,
+        price:"70 l",
+        sqft: 2555,
+        status:"Ready to move",
+        cover: require("../../Assets/Property/ghaziabad property.avif"),
+    },
+    {
+        id:6,
+        area:"Noida sector 62",
+        bhk: 2,
+        price:"9 l",
+        sqft: 700,
+        status:"Ready to move",
+        cover: require("../../Assets/Property/ghaziabad property.avif"),
+    },
+]
+
+export default LatestPropertyData;
