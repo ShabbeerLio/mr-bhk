@@ -1,0 +1,24 @@
+.PropertyDetail{
+    width: 100%;
+    padding: 30rem 0rem 4rem 0rem;
+}
+.PropertyDetail img{
+    width: 100%;
+    object-fit: cover;
+    height: 70vh;
+}
+
+.PropertyDetail-main{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 1200px) {
+    .PropertyDetail-main {
+      max-width: 1140px;
+    }
+  }
+  

@@ -1,0 +1,19 @@
+.Property{
+    width: 100%;
+    padding: 30rem 0rem 4rem 0rem;
+}
+
+.Property-main{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 1200px) {
+    .Property-main {
+      max-width: 1140px;
+    }
+  }
+  

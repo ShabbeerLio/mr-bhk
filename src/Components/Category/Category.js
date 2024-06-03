@@ -4,6 +4,7 @@ import CatergoryData from './CatergoryData'
 import ReactOwlCarousel from 'react-owl-carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { Link } from 'react-router-dom';
 
 const Category = () => {
 
@@ -30,10 +31,12 @@ const Category = () => {
                 >
                     {CatergoryData.map((item) => (
                         <div className="category-card">
-                            <div className="category-image">
-                                <img src={item.cover} alt="" />
-                            </div>
-                            <p>{item.title}</p>
+                            <Link to="/Property-detail">
+                                <div className="category-image">
+                                    <img src={item.cover} alt="" />
+                                </div>
+                                <p>{item.title}</p>
+                            </Link>
                         </div>
                     ))}
                 </ReactOwlCarousel>

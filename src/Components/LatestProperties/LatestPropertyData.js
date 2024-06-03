@@ -2,7 +2,8 @@ const LatestPropertyData =[
     {
         id:1,
         area:"Noida",
-        bhk: 3,
+        bed: 3,
+        bathroom: 5,
         price:"45 l",
         sqft: 1600,
         status:"Ready to move",
@@ -11,7 +12,8 @@ const LatestPropertyData =[
     {
         id:2,
         area:"Gurgaon",
-        bhk: 4,
+        bed: 4,
+        bathroom: 5,
         price:"56 l",
         sqft: 1797,
         status:"Ready to move",
@@ -20,7 +22,8 @@ const LatestPropertyData =[
     {
         id:3,
         area:"Delhi",
-        bhk: 5,
+        bed: 5,
+        bathroom: 5,
         price:"80 l",
         sqft: 2797,
         status:"Ready to move",
@@ -29,7 +32,8 @@ const LatestPropertyData =[
     {
         id:2,
         area:"Noida",
-        bhk: 4,
+        bed: 4,
+        bathroom: 5,
         price:"27 l",
         sqft: 997,
         status:"Ready to move",
@@ -38,7 +42,8 @@ const LatestPropertyData =[
     {
         id:5,
         area:"Ghaziabad",
-        bhk: 5,
+        bed: 5,
+        bathroom: 5,
         price:"70 l",
         sqft: 2555,
         status:"Ready to move",
@@ -47,7 +52,8 @@ const LatestPropertyData =[
     {
         id:6,
         area:"Noida sector 62",
-        bhk: 2,
+        bed: 2,
+        bathroom: 5,
         price:"9 l",
         sqft: 700,
         status:"Ready to move",
